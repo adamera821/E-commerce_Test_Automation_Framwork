@@ -1,0 +1,1 @@
+{"name": "test_search_product", "status": "skipped", "description": "Test searching for a product after login.", "start": 1748123289669, "stop": 1748123289669, "uuid": "6b8a3161-3cd1-4503-b3cf-8bbd7b5436d5", "testCaseId": "273304e3429ce61431bfc08227dc2d34", "fullName": "ecommerce_automation.tests.test_search#test_search_product"}
