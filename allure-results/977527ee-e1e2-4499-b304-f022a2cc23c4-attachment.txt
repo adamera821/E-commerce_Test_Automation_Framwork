@@ -1,0 +1,455 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 73, in emit
+    if self.shouldRollover(record):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 196, in shouldRollover
+    msg = "%s\n" % self.format(record)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 14, in format
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 29, in test_order_confirmation
+    logger.log_test_start(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 98, in log_test_start
+    self.test_logger.info(
+Message: 'Starting test: test_order_confirmation'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 73, in emit
+    if self.shouldRollover(record):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 196, in shouldRollover
+    msg = "%s\n" % self.format(record)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 14, in format
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 37, in test_order_confirmation
+    logger.log_test_step("Navigate to login page", "started", test_id=test_id)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 120, in log_test_step
+    self.test_logger.debug(
+Message: 'Test step: Navigate to login page - started'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 73, in emit
+    if self.shouldRollover(record):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 196, in shouldRollover
+    msg = "%s\n" % self.format(record)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 14, in format
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 39, in test_order_confirmation
+    logger.log_test_step("Navigate to login page", "completed", test_id=test_id)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 120, in log_test_step
+    self.test_logger.debug(
+Message: 'Test step: Navigate to login page - completed'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 73, in emit
+    if self.shouldRollover(record):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 196, in shouldRollover
+    msg = "%s\n" % self.format(record)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 14, in format
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 42, in test_order_confirmation
+    logger.log_test_step("Login", "started",
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 120, in log_test_step
+    self.test_logger.debug(
+Message: 'Test step: Login - started'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 45, in test_order_confirmation
+    LoginPage(driver).login(user["username"], user["password"])
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/pages/login_page.py", line 15, in login
+    email_field = self.wait.until(EC.presence_of_element_located(self.email_input))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010307f898 chromedriver + 5986456
+1   chromedriver                        0x00000001030769ca chromedriver + 5949898
+2   chromedriver                        0x0000000102b2f600 chromedriver + 415232
+3   chromedriver                        0x0000000102b81304 chromedriver + 750340
+4   chromedriver                        0x0000000102b81521 chromedriver + 750881
+5   chromedriver                        0x0000000102bd1204 chromedriver + 1077764
+6   chromedriver                        0x0000000102ba733d chromedriver + 906045
+7   chromedriver                        0x0000000102bce566 chromedriver + 1066342
+8   chromedriver                        0x0000000102ba70e3 chromedriver + 905443
+9   chromedriver                        0x0000000102b7361d chromedriver + 693789
+10  chromedriver                        0x0000000102b74281 chromedriver + 696961
+11  chromedriver                        0x000000010303d560 chromedriver + 5715296
+12  chromedriver                        0x0000000103041425 chromedriver + 5731365
+13  chromedriver                        0x0000000103017eb0 chromedriver + 5562032
+14  chromedriver                        0x0000000103041e5b chromedriver + 5733979
+15  chromedriver                        0x0000000103006dc4 chromedriver + 5492164
+16  chromedriver                        0x0000000103064a78 chromedriver + 5876344
+17  chromedriver                        0x0000000103064c40 chromedriver + 5876800
+18  chromedriver                        0x0000000103076591 chromedriver + 5948817
+19  libsystem_pthread.dylib             0x00007ff809470df1 _pthread_start + 99
+20  libsystem_pthread.dylib             0x00007ff80946c857 thread_start + 15
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 73, in emit
+    if self.shouldRollover(record):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/handlers.py", line 196, in shouldRollover
+    msg = "%s\n" % self.format(record)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 14, in format
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/venv/lib/python3.12/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/tests/test_order_confirmation.py", line 83, in test_order_confirmation
+    logger.log_test_end("test_order_confirmation", duration, "failed",
+  File "/Users/arunkumardamera/Documents/E-commerce_Web_Application_TesAutomation_Project/ecommerce_test_automation_v1/ecommerce_automation/utils/test_logger.py", line 109, in log_test_end
+    self.test_logger.info(
+Message: 'Test completed: test_order_confirmation - Status: failed'
+Arguments: ()

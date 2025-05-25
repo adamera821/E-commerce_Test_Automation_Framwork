@@ -45,9 +45,20 @@ The framework covers end-to-end testing of critical e-commerce functionalities i
 - **NFR1.3:** Modular and maintainable code structure
 
 #### 3.2 Reporting
-- **NFR2.1:** Detailed test execution reports
-- **NFR2.2:** Screenshot capture on test failure
-- **NFR2.3:** Test execution metrics and dashboards
+- **NFR2.1:** Detailed test execution reports with:
+  - Test execution statistics and trends
+  - Failure analysis with error details
+  - Performance metrics and duration analysis
+  - Interactive visualizations
+- **NFR2.2:** Multiple report formats:
+  - HTML reports with interactive charts
+  - Allure reports with screenshots
+  - Database-backed test results storage
+- **NFR2.3:** Test execution metrics and dashboards:
+  - Real-time test execution monitoring
+  - Historical trend analysis
+  - Performance benchmarking
+  - Failure pattern detection
 
 #### 3.3 Performance
 - **NFR3.1:** Maximum test execution time of 5 minutes for the complete suite
@@ -61,6 +72,11 @@ The framework covers end-to-end testing of critical e-commerce functionalities i
 - Selenium WebDriver
 - pytest test runner
 - Allure reporting framework
+- Advanced reporting tools:
+  - Plotly for data visualization
+  - Jinja2 for HTML templating
+  - SQLite for results storage
+  - Pandas for data analysis
 
 #### 4.2 Version Control
 - Git repository
@@ -75,11 +91,28 @@ The framework covers end-to-end testing of critical e-commerce functionalities i
 ### 5. Project Structure
 ```
 ecommerce_automation/
-├── pages/           # Page Object Model classes
-├── tests/           # Test cases
-├── utils/           # Helper functions
-├── conftest.py      # pytest configuration
-└── requirements.txt # Dependencies
+├── pages/              # Page Object Model classes
+├── tests/              # Test cases
+├── utils/
+│   ├── report_generator.py  # Advanced reporting system
+│   ├── db_manager.py       # Test results database manager
+│   ├── logger.py          # Centralized logging system
+│   └── helpers.py         # Utility functions
+├── logs/
+│   ├── test_execution/    # Test execution logs
+│   ├── database/          # Database operation logs
+│   ├── reports/          # Report generation logs
+│   └── pipeline/         # CI/CD pipeline logs
+├── reports/
+│   ├── templates/        # HTML report templates
+│   ├── assets/          # Report static assets
+│   └── archives/        # Historical reports
+├── allure-results/      # Allure report data
+├── config/
+│   ├── logging.yaml     # Logging configuration
+│   └── environment.yaml # Environment settings
+├── conftest.py         # pytest configuration
+└── requirements.txt    # Dependencies
 ```
 
 ### 6. Test Coverage
@@ -99,10 +132,23 @@ ecommerce_automation/
 
 ### 7. Deliverables
 1. Automated Test Scripts
-2. Test Execution Reports
-3. Test Results Dashboard
-4. Documentation
-5. CI/CD Pipeline Configuration
+2. Advanced Test Reporting System:
+   - Interactive HTML reports with charts
+   - Allure integration with screenshots
+   - SQLite database for test results
+   - Historical trend analysis
+3. Test Results Dashboard:
+   - Real-time execution monitoring
+   - Performance metrics visualization
+   - Failure analysis tools
+4. Comprehensive Documentation:
+   - Framework setup guide
+   - Report interpretation guide
+   - Database schema documentation
+5. CI/CD Pipeline Configuration:
+   - Automated test execution
+   - Report generation and publishing
+   - Results database management
 
 ### 8. Success Criteria
 1. 100% automation of critical test cases
@@ -133,3 +179,136 @@ ecommerce_automation/
 2. Test Case Documentation
 3. Maintenance Guide
 4. Troubleshooting Guide
+
+### 12. Logging Specifications
+
+#### 12.1 Test Execution Logs
+1. **Test Session Logs**
+   - Session start/end timestamps
+   - Test environment details
+   - Browser and driver versions
+   - Test configuration parameters
+
+2. **Individual Test Logs**
+   - Test case name and ID
+   - Start and end time
+   - Test steps execution
+   - Assertions and verifications
+   - Screenshots on failures
+   - Performance metrics
+
+3. **Page Object Logs**
+   - Element interactions
+   - Navigation events
+   - Page load timings
+   - AJAX request tracking
+   - DOM state changes
+
+#### 12.2 Database Logs
+1. **Test Results Database**
+   - Test execution records
+   - Failure details and stack traces
+   - Performance metrics storage
+   - Historical trend data
+   - Test environment metadata
+
+2. **Database Operations**
+   - Query execution logs
+   - Data insertion/update events
+   - Schema migration logs
+   - Database backup status
+
+#### 12.3 Report Generation Logs
+1. **HTML Report Generation**
+   - Template processing events
+   - Data aggregation steps
+   - Chart generation status
+   - Asset compilation logs
+
+2. **Allure Report Integration**
+   - Result file generation
+   - Attachment processing
+   - Report compilation status
+   - Publishing events
+
+#### 12.4 Framework Logs
+1. **Configuration Management**
+   - Environment setup
+   - Configuration loading
+   - Parameter validation
+   - Resource initialization
+
+2. **Resource Management**
+   - Browser instance creation/disposal
+   - Screenshot capture events
+   - Memory usage tracking
+   - cleanup operations
+
+#### 12.5 CI/CD Pipeline Logs
+1. **GitHub Actions Workflow**
+   - Pipeline trigger events
+   - Stage execution status
+   - Test execution progress
+   - Report generation status
+   - Deployment events
+
+2. **Integration Logs**
+   - Version control operations
+   - Dependency management
+   - Environment setup
+   - Artifact handling
+
+#### 12.6 Log Management
+1. **Log Levels**
+   - ERROR: Test failures, exceptions
+   - WARNING: Test anomalies, timeouts
+   - INFO: Test progress, major events
+   - DEBUG: Detailed execution flow
+   - TRACE: Step-by-step details
+
+2. **Log Storage**
+   - File-based logging
+   - Database logging
+   - Cloud storage integration
+   - Log rotation policies
+
+3. **Log Analysis**
+   - Error pattern detection
+   - Performance bottleneck identification
+   - Test stability metrics
+   - Resource usage analysis
+
+#### 12.7 Log Formats
+1. **Standard Log Entry**
+```
+[TIMESTAMP] [LEVEL] [COMPONENT] [TEST_ID] Message
+Additional Context:
+- Parameter values
+- Stack traces
+- Performance metrics
+```
+
+2. **JSON Log Format**
+```json
+{
+  "timestamp": "ISO-8601",
+  "level": "INFO|WARNING|ERROR",
+  "component": "TestName|PageObject|Database",
+  "message": "Log message",
+  "context": {
+    "test_id": "UUID",
+    "browser": "Chrome|Firefox",
+    "environment": "Test|Stage|Prod",
+    "metrics": {
+      "duration": "milliseconds",
+      "memory": "bytes"
+    }
+  }
+}
+```
+
+3. **Report Integration**
+   - Log aggregation in reports
+   - Searchable log interface
+   - Log-based analytics
+   - Trend visualization
